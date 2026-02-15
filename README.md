@@ -7,10 +7,10 @@ This repository provides a set of scripts to measure the quality of Getty Proven
 
 The following files are provided:
 
-- list of classes analysed: [query-classes-getty.csv](query-classes-getty.csv)
+- a list of classes analysed: [query-classes-getty.csv](query-classes-getty.csv)
 - python script to generate the ShEx: [shexer-getty-provenance.py](shexer-getty-provenance.py)
 - ShEx schemas: [shaper_getty_provenance-50.shex](shaper_getty_provenance-50.shex)
-- manifests to be used with the [ShEx Online validator](http://shex.io/webapps/shex.js/doc/shex-simple.html)
+- a list of manifests to be used with the [ShEx Online validator](http://shex.io/webapps/shex.js/doc/shex-simple.html)
 
 ## Examples of SPARQL queries
 
