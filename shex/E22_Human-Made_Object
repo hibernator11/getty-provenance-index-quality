@@ -1,0 +1,28 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ex: <http://example.org/>
+PREFIX weso-s: <http://weso.es/shapes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX cidoc-crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX schema: <http://schema.org/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX dc: <http://purl.org/dc/terms/>
+
+start = @<object>
+<object> {
+   rdf:type  [cidoc-crm:E22_Human-Made_Object]  ;              # 100.0 %
+   rdfs:label  xsd:string  ?;
+            # 89.28571428571429 % obj: xsd:string. Cardinality: {1}
+   cidoc-crm:P67i_is_referred_to_by  IRI  *;
+            # 89.28571428571429 % obj: IRI. Cardinality: +
+            # 76.78571428571429 % obj: @weso-s:E33_Linguistic_Object. Cardinality: +
+   cidoc-crm:P1_is_identified_by  IRI  *;
+            # 89.28571428571429 % obj: IRI. Cardinality: +
+   cidoc-crm:P2_has_type  IRI  ?;
+            # 89.28571428571429 % obj: IRI. Cardinality: {1}
+            # 83.92857142857143 % obj: @weso-s:E55_Type. Cardinality: {1}
+   cidoc-crm:P108i_was_produced_by  IRI  ?;
+            # 85.71428571428571 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P65_shows_visual_item  IRI  ?
+            # 85.71428571428571 % obj: IRI. Cardinality: {1}
+}
