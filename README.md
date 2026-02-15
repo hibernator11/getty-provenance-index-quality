@@ -10,7 +10,7 @@ The following files are provided:
 - a list of classes analysed: [query-classes-getty.csv](query-classes-getty.csv)
 - python script to generate the ShEx: [shexer-getty-provenance.py](shexer-getty-provenance.py)
 - ShEx schemas: [shaper_getty_provenance-50.shex](shaper_getty_provenance-50.shex)
-- a list of manifests to be used with the [ShEx Online validator](http://shex.io/webapps/shex.js/doc/shex-simple.html?manifestURL=https://raw.githubusercontent.com/hibernator11/getty-sparql-queries/refs/heads/main/getty-manifest.json)
+- a [manifest](getty-manifest.json) to be used with the [ShEx Online validator](http://shex.io/webapps/shex.js/doc/shex-simple.html?manifestURL=https://raw.githubusercontent.com/hibernator11/getty-sparql-queries/refs/heads/main/getty-manifest.json)
   
 ## Examples of SPARQL queries
 
