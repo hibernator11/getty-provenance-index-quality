@@ -1,0 +1,411 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex: <http://example.org/>
+PREFIX weso-s: <http://weso.es/shapes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX cidoc-crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX schema: <http://schema.org/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX creativeCommons: <http://creativecommons.org/ns#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX art: <https://linked.art/ns/terms/>
+
+weso-s:E8_Acquisition
+{
+   rdf:type  [cidoc-crm:E8_Acquisition]  ;                     # 100.0 %
+   cidoc-crm:P24_transferred_title_of  @weso-s:E22_Human-Made_Object  +;          # 100.0 %
+            # 96.0 % obj: @weso-s:E22_Human-Made_Object. Cardinality: {1}
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P1_is_identified_by  IRI  +;                      # 100.0 %
+            # 96.0 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P22_transferred_title_to  IRI  *;
+            # 92.0 % obj: IRI. Cardinality: +
+            # 90.0 % obj: IRI. Cardinality: {1}
+            # 74.0 % obj: @weso-s:E74_Group. Cardinality: {1}
+   cidoc-crm:P23_transferred_title_from  IRI  ?
+            # 82.0 % obj: IRI. Cardinality: {1}
+            # 72.0 % obj: @weso-s:E74_Group. Cardinality: {1}
+}
+
+
+weso-s:E7_Activity
+{
+   rdf:type  [cidoc-crm:E7_Activity]  ;                        # 100.0 %
+   cidoc-crm:P2_has_type  IRI  +;                              # 100.0 %
+   cidoc-crm:P67i_is_referred_to_by  IRI  *
+            # 80.0 % obj: IRI. Cardinality: +
+}
+
+
+weso-s:E98_Currency
+{
+   rdf:type  [cidoc-crm:E98_Currency]  ;                       # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  +;          # 100.0 %
+            # 95.0 % obj: xsd:string. Cardinality: {1}
+   rdf:type  [cidoc-crm:E55_Type]  ?
+            # 80.0 % obj: cidoc-crm:E55_Type. Cardinality: {1}
+}
+
+
+weso-s:Payment
+{
+   rdf:type  [art:Payment]  ;                                  # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   art:paid_amount  IRI  ?;
+            # 98.0 % obj: IRI. Cardinality: {1}
+            # 86.0 % obj: @weso-s:E97_Monetary_Amount. Cardinality: {1}
+   art:paid_from  IRI  *;
+            # 94.0 % obj: IRI. Cardinality: +
+            # 92.0 % obj: IRI. Cardinality: {1}
+            # 76.0 % obj: @weso-s:E74_Group. Cardinality: {1}
+   art:paid_to  IRI  ?
+            # 78.0 % obj: IRI. Cardinality: {1}
+}
+
+
+weso-s:E97_Monetary_Amount
+{
+   rdf:type  [cidoc-crm:E97_Monetary_Amount]  ;                # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P180_has_currency  IRI  ?;
+            # 96.0 % obj: IRI. Cardinality: {1}
+            # 96.0 % obj: @weso-s:E98_Currency. Cardinality: {1}
+            # 96.0 % obj: @weso-s:E55_Type. Cardinality: {1}
+   cidoc-crm:P90_has_value  xsd:integer  ?
+            # 88.0 % obj: xsd:integer. Cardinality: {1}
+}
+
+
+weso-s:D1_Digital_Object
+{
+   rdf:type  [<http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object>]  ;          # 100.0 %
+   art:access_point  IRI  ?;
+            # 98.0 % obj: IRI. Cardinality: {1}
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ?;
+            # 98.0 % obj: xsd:string. Cardinality: {1}
+   cidoc-crm:P67i_is_referred_to_by  IRI  ?;
+            # 98.0 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P1_is_identified_by  IRI  ?;
+            # 98.0 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P2_has_type  IRI  ?
+            # 98.0 % obj: IRI. Cardinality: {1}
+}
+
+
+weso-s:S19_Encounter_Event
+{
+   rdf:type  [<http://www.ics.forth.gr/isl/CRMsci/S19_Encounter_Event>]  ;          # 100.0 %
+   <http://www.ics.forth.gr/isl/CRMsci/O19_encountered_object>  IRI  ;          # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P1_is_identified_by  IRI  ;                       # 100.0 %
+   cidoc-crm:P2_has_type  IRI  ;                               # 100.0 %
+   cidoc-crm:P4_has_time-span  IRI  ?
+            # 84.0 % obj: IRI. Cardinality: {1}
+}
+
+
+weso-s:E55_Type
+{
+   rdf:type  [cidoc-crm:E55_Type]  ;                           # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  +          # 100.0 %
+            # 99.07407407407408 % obj: xsd:string. Cardinality: {1}
+}
+
+
+weso-s:E33_E41_Linguistic_Appellation
+{
+   rdf:type  [cidoc-crm:E33_E41_Linguistic_Appellation]  ;          # 100.0 %
+   cidoc-crm:P190_has_symbolic_content  xsd:string  ?
+            # 96.0 % obj: xsd:string. Cardinality: {1}
+}
+
+
+weso-s:E36_Visual_Item
+{
+   rdf:type  [cidoc-crm:E36_Visual_Item]  ;                    # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P67i_is_referred_to_by  @weso-s:E33_Linguistic_Object  +;          # 100.0 %
+            # 84.0 % obj: @weso-s:E33_Linguistic_Object. Cardinality: {1}
+   cidoc-crm:P1_is_identified_by  IRI  +;                      # 100.0 %
+            # 76.0 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P2_has_type  IRI  *
+            # 88.0 % obj: IRI. Cardinality: +
+            # 74.0 % obj: IRI. Cardinality: {1}
+}
+
+
+weso-s:E33_Linguistic_Object
+{
+   rdf:type  [cidoc-crm:E33_Linguistic_Object]  ;              # 100.0 %
+   cidoc-crm:P2_has_type  IRI  +;                              # 100.0 %
+   cidoc-crm:P1_is_identified_by  IRI  *;
+            # 88.0 % obj: IRI. Cardinality: +
+   cidoc-crm:P94i_was_created_by  IRI  ?;
+            # 88.0 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P106i_forms_part_of  IRI  ?;
+            # 82.0 % obj: IRI. Cardinality: {1}
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ?;
+            # 74.0 % obj: xsd:string. Cardinality: {1}
+   cidoc-crm:P67i_is_referred_to_by  @weso-s:E33_Linguistic_Object  *
+            # 74.0 % obj: @weso-s:E33_Linguistic_Object. Cardinality: +
+}
+
+
+weso-s:E53_Place
+{
+   rdf:type  [cidoc-crm:E53_Place]  ;                          # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P67i_is_referred_to_by  IRI  +;                   # 100.0 %
+            # 98.0 % obj: @weso-s:E33_Linguistic_Object. Cardinality: +
+   cidoc-crm:P1_is_identified_by  IRI  +;                      # 100.0 %
+            # 74.0 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P89_falls_within  IRI  ?
+            # 96.0 % obj: IRI. Cardinality: {1}
+            # 76.0 % obj: @weso-s:E53_Place. Cardinality: {1}
+}
+
+
+weso-s:E69_Death
+{
+   rdf:type  [cidoc-crm:E69_Death]  ;                          # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P4_has_time-span  IRI                             # 100.0 %
+}
+
+
+weso-s:E67_Birth
+{
+   rdf:type  [cidoc-crm:E67_Birth]  ;                          # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P4_has_time-span  IRI                             # 100.0 %
+}
+
+
+weso-s:E10_Transfer_of_Custody
+{
+   rdf:type  [cidoc-crm:E10_Transfer_of_Custody]  ;            # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P30_transferred_custody_of  IRI  ;                # 100.0 %
+   cidoc-crm:P29_custody_received_by  IRI  ?
+            # 78.0 % obj: IRI. Cardinality: {1}
+}
+
+
+weso-s:E66_Formation
+{
+   rdf:type  [cidoc-crm:E66_Formation]  ;                      # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P4_has_time-span  IRI  ?
+            # 90.0 % obj: IRI. Cardinality: {1}
+}
+
+
+weso-s:E39_Actor
+{
+   rdf:type  [cidoc-crm:E39_Actor]                             # 100.0 %
+}
+
+
+weso-s:E58_Measurement_Unit
+{
+   rdf:type  [cidoc-crm:E55_Type]  ;                           # 100.0 %
+   rdf:type  [cidoc-crm:E58_Measurement_Unit]  ;               # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string            # 100.0 %
+}
+
+
+weso-s:E30_Right
+{
+   rdf:type  [cidoc-crm:E30_Right]  ;                          # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P2_has_type  IRI  ;                               # 100.0 %
+   cidoc-crm:P43_has_dimension  IRI  ?;
+            # 70.0 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P75i_is_possessed_by  IRI  ?
+            # 70.0 % obj: IRI. Cardinality: {1}
+}
+
+
+weso-s:RightAcquisition
+{
+   rdf:type  [art:RightAcquisition]  ;                         # 100.0 %
+   art:establishes  IRI                                        # 100.0 %
+}
+
+
+weso-s:E54_Dimension
+{
+   rdf:type  [cidoc-crm:E54_Dimension]  ;                      # 100.0 %
+   cidoc-crm:P91_has_unit  IRI                                 # 100.0 %
+            # 100.0 % obj: @weso-s:E55_Type. Cardinality: {1}
+            # 100.0 % obj: @weso-s:E58_Measurement_Unit. Cardinality: {1}
+}
+
+
+weso-s:E13_Attribute_Assignment
+{
+   rdf:type  [cidoc-crm:E13_Attribute_Assignment]  ;           # 100.0 %
+   cidoc-crm:P14_carried_out_by  @weso-s:E74_Group             # 100.0 %
+}
+
+
+weso-s:E42_Identifier
+{
+   rdf:type  [cidoc-crm:E42_Identifier]  ;                     # 100.0 %
+   cidoc-crm:P2_has_type  IRI  ;                               # 100.0 %
+   cidoc-crm:P141i_was_assigned_by  IRI  ;                     # 100.0 %
+            # 84.0 % obj: @weso-s:E13_Attribute_Assignment. Cardinality: {1}
+   cidoc-crm:P190_has_symbolic_content  xsd:integer  ?
+            # 98.0 % obj: xsd:integer. Cardinality: {1}
+}
+
+
+weso-s:E65_Creation
+{
+   rdf:type  [cidoc-crm:E65_Creation]  ;                       # 100.0 %
+   cidoc-crm:P14_carried_out_by  @weso-s:E74_Group             # 100.0 %
+}
+
+
+weso-s:E74_Group
+{
+   rdf:type  [cidoc-crm:E74_Group]  ;                          # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P67i_is_referred_to_by  IRI  +;                   # 100.0 %
+            # 98.11320754716981 % obj: @weso-s:E33_Linguistic_Object. Cardinality: +
+   cidoc-crm:P1_is_identified_by  IRI  +;                      # 100.0 %
+   cidoc-crm:P14i_performed  IRI  *;
+            # 92.45283018867924 % obj: IRI. Cardinality: +
+   <http://www.w3.org/2004/02/skos/core#exactMatch>  IRI  ?;
+            # 83.01886792452831 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P2_has_type  IRI  *
+            # 77.35849056603774 % obj: IRI. Cardinality: +
+            # 75.47169811320755 % obj: @weso-s:E55_Type. Cardinality: {1}
+}
+
+
+weso-s:E21_Person
+{
+   rdf:type  [cidoc-crm:E21_Person]  ;                         # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P67i_is_referred_to_by  IRI  +;                   # 100.0 %
+   cidoc-crm:P1_is_identified_by  IRI  +;                      # 100.0 %
+   cidoc-crm:P14i_performed  IRI  *;
+            # 90.0 % obj: IRI. Cardinality: +
+   cidoc-crm:P2_has_type  IRI  *
+            # 88.0 % obj: IRI. Cardinality: +
+            # 76.0 % obj: IRI. Cardinality: {2}
+            # 74.0 % obj: @weso-s:E55_Type. Cardinality: {1}
+}
+
+
+weso-s:E12_Production
+{
+   rdf:type  [cidoc-crm:E12_Production]  ;                     # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string            # 100.0 %
+}
+
+
+weso-s:E52_Time-Span
+{
+   rdf:type  [cidoc-crm:E52_Time-Span]  ;                      # 100.0 %
+   cidoc-crm:P1_is_identified_by  IRI  ?;
+            # 78.0 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P82a_begin_of_the_begin  xsd:string  ?;
+            # 78.0 % obj: xsd:string. Cardinality: {1}
+   cidoc-crm:P82b_end_of_the_end  xsd:string  ?
+            # 78.0 % obj: xsd:string. Cardinality: {1}
+}
+
+
+weso-s:E22_Human-Made_Object
+{
+   rdf:type  [cidoc-crm:E22_Human-Made_Object]  ;              # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ?;
+            # 89.28571428571429 % obj: xsd:string. Cardinality: {1}
+   cidoc-crm:P67i_is_referred_to_by  IRI  *;
+            # 89.28571428571429 % obj: IRI. Cardinality: +
+            # 76.78571428571429 % obj: @weso-s:E33_Linguistic_Object. Cardinality: +
+   cidoc-crm:P1_is_identified_by  IRI  *;
+            # 89.28571428571429 % obj: IRI. Cardinality: +
+   cidoc-crm:P2_has_type  IRI  ?;
+            # 89.28571428571429 % obj: IRI. Cardinality: {1}
+            # 83.92857142857143 % obj: @weso-s:E55_Type. Cardinality: {1}
+   cidoc-crm:P108i_was_produced_by  IRI  ?;
+            # 85.71428571428571 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P65_shows_visual_item  IRI  ?
+            # 85.71428571428571 % obj: IRI. Cardinality: {1}
+}
+
+
+weso-s:E68_Dissolution
+{
+   rdf:type  [cidoc-crm:E68_Dissolution]  ;                    # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P4_has_time-span  IRI                             # 100.0 %
+}
+
+
+weso-s:E6_Destruction
+{
+   rdf:type  [cidoc-crm:E6_Destruction]  ;                     # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P67i_is_referred_to_by  IRI                       # 100.0 %
+}
+
+
+weso-s:E57_Material
+{
+   rdf:type  [cidoc-crm:E57_Material]  ;                       # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   rdf:type  [cidoc-crm:E55_Type]  ?
+            # 86.04651162790698 % obj: cidoc-crm:E55_Type. Cardinality: {1}
+}
+
+
+weso-s:E56_Language
+{
+   rdf:type  [cidoc-crm:E55_Type]  ;                           # 100.0 %
+   rdf:type  [cidoc-crm:E56_Language]  ;                       # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string            # 100.0 %
+}
+
+
+weso-s:E19_Physical_Object
+{
+   rdf:type  [cidoc-crm:E19_Physical_Object]                   # 100.0 %
+}
+
+
+weso-s:Set
+{
+   rdf:type  [art:Set]  ;                                      # 100.0 %
+   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   cidoc-crm:P67i_is_referred_to_by  IRI  +;                   # 100.0 %
+            # 96.0 % obj: IRI. Cardinality: {2}
+   cidoc-crm:P1_is_identified_by  IRI  +;                      # 100.0 %
+            # 96.0 % obj: IRI. Cardinality: {2}
+   cidoc-crm:P2_has_type  IRI  ;                               # 100.0 %
+   cidoc-crm:P94i_was_created_by  IRI                          # 100.0 %
+}
+
+
+weso-s:E70_Thing
+{
+   rdf:type  [cidoc-crm:E70_Thing]                             # 100.0 %
+}
+
+
+weso-s:E1_CRM_Entity
+{
+   rdf:type  [cidoc-crm:E1_CRM_Entity]                         # 100.0 %
+}
+
+
+weso-s:Graph
+{
+   rdf:type  [<https://www.w3.org/2004/03/trix/rdfg-1/Graph>]            # 100.0 %
+}
+
+
