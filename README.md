@@ -96,3 +96,4 @@ Please, note that the datasets used in this project have separate licences.
 - https://observablehq.com/d/6c4d0f0ff448a165
 - https://www.openartdata.org/2025/10/dataset-getty-gpi-merged-with-wikidata.html?m=1
 - Daniel Fernández-Álvarez, José Emilio Labra Gayo, Daniel Gayo-Avello: Automatic extraction of shapes using sheXer. Knowl. Based Syst. 238: 107975 (2022)
+- Gustavo Candela: An automatic data quality approach to assess semantic data from cultural heritage institutions. J. Assoc. Inf. Sci. Technol. 74(7): 866-878 (2023)
