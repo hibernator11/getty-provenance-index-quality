@@ -1,5 +1,8 @@
-## Getty provenance index
+## Getty Provenance Index
 This repository intends to describe examples of SPARQL queries for the [Provenance Index](https://data.getty.edu/provenance/docs/) at Getty. The SPARQL point is available at https://data.getty.edu/provenance/sparql-ui.
+
+
+## Examples of SPARQL queries
 
 ### Retrieve all classes
 
