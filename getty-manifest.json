@@ -1,8 +1,8 @@
 [   
     {
-        "schemaLabel": "Getty vocabularies cidoc-crm:Person",
+        "schemaLabel": "Getty vocabularies cidoc-crm:E21_Person",
         "schemaURL": "https://raw.githubusercontent.com/hibernator11/getty-sparql-queries/main/getty-person.shex",
-        "dataLabel": "Get 100 items typed as cidoc-crm:Person from Getty Provenance Index" ,
+        "dataLabel": "Get 100 items typed as cidoc-crm:E21_Person from Getty Provenance Index" ,
         "data": "Endpoint: https://data.getty.edu/provenance/sparql",
         "queryMap": "SPARQL '''PREFIX cidoc-crm: <http://www.cidoc-crm.org/cidoc-crm/>\r\n select ?s where {\r\n ?s rdf:type cidoc-crm:E21_Person\r\n}\r\n limit 100'''@START",
         "status": "conformant"
