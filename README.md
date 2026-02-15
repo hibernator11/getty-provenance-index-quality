@@ -1,6 +1,16 @@
 ## Getty Provenance Index
-This repository intends to describe examples of SPARQL queries for the [Provenance Index](https://data.getty.edu/provenance/docs/) at Getty. The SPARQL point is available at https://data.getty.edu/provenance/sparql-ui.
+This repository intends to describe examples of SPARQL queries for the [Getty Provenance Index](https://data.getty.edu/provenance/docs/) at Getty. The SPARQL point is available at https://data.getty.edu/provenance/sparql-ui.
 
+## Generating Shape Expressions to measure the quality of the data
+
+This repository provides a set of scripts to measure the quality of Getty Provenance Index. First, a python script generates the ShEx schemas, a list of constraints to measure the quality of the resources. Then, the ShEx can be employed to be tested against the knowledge graph.
+
+The following files are provided:
+
+- list of classes analysed: query-classes-getty.csv
+- python script to generate the ShEx: shexer-getty-provenance.py
+- ShEx schemas: shaper_getty_provenance-50.shex
+- manifests to be used with the [ShEx Online validator](http://shex.io/webapps/shex.js/doc/shex-simple.html)
 
 ## Examples of SPARQL queries
 
