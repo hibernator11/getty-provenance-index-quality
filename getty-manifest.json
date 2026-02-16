@@ -30,6 +30,14 @@
         "data": "Endpoint: https://data.getty.edu/provenance/sparql",
         "queryMap": "SPARQL '''PREFIX cidoc-crm: <http://www.cidoc-crm.org/cidoc-crm/>\r\n select ?s where {\r\n ?s rdf:type cidoc-crm:E8_Acquisition\r\n}\r\n limit 100'''@START",
         "status": "conformant"
+    },
+    {
+        "schemaLabel": "Getty vocabularies art:Payment",
+        "schemaURL": "https://raw.githubusercontent.com/hibernator11/getty-sparql-queries/main/shex/getty-payment.shex",
+        "dataLabel": "Get 100 items typed as art:Payment from Getty Provenance Index" ,
+        "data": "Endpoint: https://data.getty.edu/provenance/sparql",
+        "queryMap": "SPARQL '''PREFIX art: <https://linked.art/ns/terms/>\r\n select ?s where {\r\n ?s rdf:type art:Payment\r\n}\r\n limit 100'''@START",
+        "status": "conformant"
     }
 
     
