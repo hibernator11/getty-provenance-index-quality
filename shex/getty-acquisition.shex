@@ -11,9 +11,9 @@ PREFIX dc: <http://purl.org/dc/terms/>
 start = @<acquisition>
 <acquisition> {
    rdf:type  [cidoc-crm:E8_Acquisition]  ;                     # 100.0 %
-   cidoc-crm:P24_transferred_title_of  @weso-s:E22_Human-Made_Object  +;          # 100.0 %
+   #cidoc-crm:P24_transferred_title_of  @weso-s:E22_Human-Made_Object  +;          # 100.0 %
             # 96.0 % obj: @weso-s:E22_Human-Made_Object. Cardinality: {1}
-   <http://www.w3.org/2000/01/rdf-schema#label>  xsd:string  ;          # 100.0 %
+   rdfs:label  xsd:string  ;          # 100.0 %
    cidoc-crm:P1_is_identified_by  IRI  +;                      # 100.0 %
             # 96.0 % obj: IRI. Cardinality: {1}
    cidoc-crm:P22_transferred_title_to  IRI  *;
