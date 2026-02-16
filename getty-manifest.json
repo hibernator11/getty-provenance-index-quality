@@ -1,6 +1,6 @@
 [   
     {
-        "schemaLabel": "Getty vocabularies cidoc-crm:E21_Person",
+        "schemaLabel": "Getty Provenance Index cidoc-crm:E21_Person",
         "schemaURL": "https://raw.githubusercontent.com/hibernator11/getty-sparql-queries/main/shex/getty-person.shex",
         "dataLabel": "Get 100 items typed as cidoc-crm:E21_Person from Getty Provenance Index" ,
         "data": "Endpoint: https://data.getty.edu/provenance/sparql",
@@ -8,7 +8,7 @@
         "status": "conformant"
     },
     {
-        "schemaLabel": "Getty vocabularies cidoc-crm:E22_Human-Made_Object",
+        "schemaLabel": "Getty Provenance Index cidoc-crm:E22_Human-Made_Object",
         "schemaURL": "https://raw.githubusercontent.com/hibernator11/getty-sparql-queries/main/shex/getty-object.shex",
         "dataLabel": "Get 100 items typed as cidoc-crm:E22_Human-Made_Object from Getty Provenance Index" ,
         "data": "Endpoint: https://data.getty.edu/provenance/sparql",
@@ -16,7 +16,7 @@
         "status": "conformant"
     },
     {
-        "schemaLabel": "Getty vocabularies cidoc-crm:E7_Activity",
+        "schemaLabel": "Getty Provenance Index cidoc-crm:E7_Activity",
         "schemaURL": "https://raw.githubusercontent.com/hibernator11/getty-sparql-queries/main/shex/getty-activity.shex",
         "dataLabel": "Get 100 items typed as cidoc-crm:E7_Activity from Getty Provenance Index" ,
         "data": "Endpoint: https://data.getty.edu/provenance/sparql",
@@ -24,7 +24,7 @@
         "status": "conformant"
     },
     {
-        "schemaLabel": "Getty vocabularies cidoc-crm:E8_Acquisition",
+        "schemaLabel": "Getty Provenance Index cidoc-crm:E8_Acquisition",
         "schemaURL": "https://raw.githubusercontent.com/hibernator11/getty-sparql-queries/main/shex/getty-acquisition.shex",
         "dataLabel": "Get 100 items typed as cidoc-crm:E8_Acquisition from Getty Provenance Index" ,
         "data": "Endpoint: https://data.getty.edu/provenance/sparql",
@@ -32,7 +32,7 @@
         "status": "conformant"
     },
     {
-        "schemaLabel": "Getty vocabularies art:Payment",
+        "schemaLabel": "Getty Provenance Index art:Payment",
         "schemaURL": "https://raw.githubusercontent.com/hibernator11/getty-sparql-queries/main/shex/getty-payment.shex",
         "dataLabel": "Get 100 items typed as art:Payment from Getty Provenance Index" ,
         "data": "Endpoint: https://data.getty.edu/provenance/sparql",
