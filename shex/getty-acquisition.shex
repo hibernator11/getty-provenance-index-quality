@@ -11,16 +11,16 @@ PREFIX dc: <http://purl.org/dc/terms/>
 start = @<acquisition>
 <acquisition> {
    rdf:type  [cidoc-crm:E8_Acquisition]  ;                     # 100.0 %
-   #cidoc-crm:P24_transferred_title_of  @weso-s:E22_Human-Made_Object  +;          # 100.0 %
-            # 96.0 % obj: @weso-s:E22_Human-Made_Object. Cardinality: {1}
-   rdfs:label  xsd:string  ;          # 100.0 %
-   cidoc-crm:P1_is_identified_by  IRI  +;                      # 100.0 %
-            # 96.0 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P24_transferred_title_of  IRI  +;                 # 100.0 %
+            # 99.33333333333333 % obj: IRI. Cardinality: {1}
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   cidoc-crm:P1_is_identified_by  IRI  *;
+            # 97.66666666666667 % obj: IRI. Cardinality: +
+            # 97.0 % obj: IRI. Cardinality: {1}
    cidoc-crm:P22_transferred_title_to  IRI  *;
-            # 92.0 % obj: IRI. Cardinality: +
-            # 90.0 % obj: IRI. Cardinality: {1}
-            # 74.0 % obj: @weso-s:E74_Group. Cardinality: {1}
-   cidoc-crm:P23_transferred_title_from  IRI  ?
-            # 82.0 % obj: IRI. Cardinality: {1}
-            # 72.0 % obj: @weso-s:E74_Group. Cardinality: {1}
+            # 94.33333333333334 % obj: IRI. Cardinality: +
+            # 93.66666666666667 % obj: IRI. Cardinality: {1}
+   cidoc-crm:P23_transferred_title_from  IRI  *
+            # 89.66666666666666 % obj: IRI. Cardinality: +
+            # 82.66666666666667 % obj: IRI. Cardinality: {1}
 }
