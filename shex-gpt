@@ -1,0 +1,36 @@
+PREFIX crm:  <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<E8_Acquisition_Shape> CLOSED {
+
+  # Class assertion
+  a [crm:E8_Acquisition] ;
+
+  # Transaction / record identifier (Getty Provenance Index record ID)
+  crm:P1_is_identified_by 1..* IRI ;
+
+  # Object(s) whose title is transferred
+  crm:P24_transferred_title_of 1..* IRI ;
+
+  # Buyer(s) (required in GPI sales records)
+  crm:P22_transferred_title_to 1..* IRI ;
+
+  # Seller(s) (may be unknown)
+  crm:P23_transferred_title_from 0..* IRI ;
+
+  # Time-span of the transaction (exactly one)
+  crm:P4_has_time-span 1 IRI ;
+
+  # Place of sale (auction house location, city, etc.)
+  crm:P7_took_place_at 0..1 IRI ;
+
+  # Sale price (structured monetary amount node)
+  crm:P179_had_sales_price 0..1 IRI ;
+
+  # Literal transcription / remarks from source
+  crm:P3_has_note 0..* xsd:string ;
+
+  # Optional human-readable label
+  rdfs:label 0..1 xsd:string ;
+}
